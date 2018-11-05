@@ -14,10 +14,9 @@ BEGIN
     BEGIN
       FOR i IN 1 .. 9 LOOP
         number_list (i) := SUBSTR (l_tcno, i, 1);
-      -- DBMS_OUTPUT.put_line ( 'Number_list(' || TO_CHAR ( i) || ')' || TO_CHAR ( number_list ( i)));
       END LOOP;
 
-      -- 1,3,5,7 ve 9.cu hanelerin toplaminin 7 ile carpimindan 2,4,6, ve 8. haneler cikartildiginda geriye kalan sayinin 10'a gore modu 10. haneyi verir
+      -- 1,3,5,7 ve 9. hanelerin toplaminin 7 ile carpimindan 2,4,6, ve 8. haneler cikartildiginda geriye kalan sayinin 10'a gore modu 10. haneyi verir
       number_list (10) := ( (number_list (1) + number_list (3) + number_list (5) + number_list (7) + number_list (9)) * 7) - (number_list (2) + number_list (4) + number_list (6) + number_list (8));
       IF number_list (10) < 10 THEN
         number_list (10) := number_list (10) + 10;
