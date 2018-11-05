@@ -22,6 +22,7 @@ BEGIN
         number_list (10) := number_list (10) + 10;
       END IF;
       number_list (10) := MOD (number_list (10), 10);
+      
       -- 1,2,3,4,5,6,7,8,9 ve 10. sayilarin toplaminin 10'a gore modu  11. rakami saglar
       number_list (11) := number_list (1) + number_list (2) + number_list (3) + number_list (4) + number_list (5) + number_list (6) + number_list (7) + number_list (8) + number_list (9) + number_list (10);
       number_list (11) := MOD (number_list (11), 10);
