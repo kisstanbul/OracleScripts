@@ -1,3 +1,6 @@
+-- You may use DBMS_UTILITY :
+-- EXEC DBMS_UTILITY.compile_schema(schema => 'Schema_Name', compile_all => false);
+--
 BEGIN
   FOR item IN (SELECT object_name, object_type, DECODE (object_type,  'PACKAGE', 1,  'PACKAGE BODY', 2,  3) AS recompile_order
                FROM user_objects
